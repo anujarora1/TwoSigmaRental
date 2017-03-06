@@ -14,7 +14,7 @@ bathrooms = []
 price = []
 interest_level = []
 
-with open('train.json') as datafile:
+with open('..\data\\train.json\\train.json') as datafile:
 	allData = json.load(datafile)
 
 listingData = allData['listing_id']
@@ -33,7 +33,7 @@ for key in listingData.keys():
 
 counter = 0
 totalEntries = len(myKeys)
-outputFile = 'train.csv'
+outputFile = '..\data\\train.csv'
 fid = open(outputFile, 'w')
 fid.write('local_key,listingId,bedrooms,bathrooms,price,interestLevel\n')
 while counter < totalEntries:
